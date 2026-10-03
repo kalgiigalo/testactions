@@ -118,7 +118,7 @@ dependencies {
 
     implementation 'androidx.browser:browser:1.10.0'
     implementation 'app.nekogram.gifski:gifski:1.0.2'
-    implementation 'app.nekogram.translator:translator:2.0.0'
+    implementation 'app.nekogram.translator:translator:2.0.2'
     implementation 'com.jaredrummler:truetypeparser-light:1.0.0'
     implementation 'com.squareup.okhttp3:okhttp:5.5.0'
     implementation 'org.lsposed.hiddenapibypass:hiddenapibypass:6.1'
@@ -129,7 +129,7 @@ dependencies {
     implementation 'co.nstant.in:cbor:0.9'
 
     implementation 'com.google.firebase:firebase-analytics:23.2.0'
-    implementation 'io.sentry:sentry-android:8.58.0'
+    implementation 'io.sentry:sentry-android:8.59.0'
 }
 
 android {
