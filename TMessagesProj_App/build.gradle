@@ -5,23 +5,12 @@ plugins {
     id 'androidx.baselineprofile'
     id 'org.telegram.build-app-plugin'
     id 'com.google.gms.google-services'
-    id 'io.sentry.android.gradle'
 }
 
 dependencies {
     implementation project(':TMessagesProj')
     implementation 'androidx.profileinstaller:profileinstaller:1.4.1'
     baselineProfile project(':baselineprofile')
-}
-
-sentry {
-    uploadNativeSymbols = true
-    includeSourceContext = true
-    additionalSourceDirsForSourceContext = [ '../TMessagesProj/src/main/java' ]
-    autoInstallation {
-        enabled = false
-    }
-    ignoredBuildTypes = ["debug"]
 }
 
 android {
@@ -82,7 +71,7 @@ android {
 
         multiDexEnabled true
 
-        manifestPlaceholders = [MAPS_API_KEY: localProperties.get("mapsApiKey")]
+        manifestPlaceholders = [MAPS_API_KEY: localProperties.get("mapsApiKey", "")]
     }
 
     splits.abi {
